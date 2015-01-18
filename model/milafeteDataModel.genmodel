@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/dz.smartMilefe.milafete/src" editDirectory="/dz.smartMilefe.milafete.edit/src"
+    editorDirectory="/dz.smartMilefe.milafete.editor/src" modelPluginID="dz.smartMilefe.milafete"
+    modelName="MilafeteDataModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    editPluginID="dz.smartMilefe.milafete.edit" editorPluginID="dz.smartMilefe.milafete.editor"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>milafeteDataModel.ecore</foreignModel>
+  <genPackages prefix="milafeteDataModel" basePackage="dz.smartMilefe.milafete" disposableProviderFactory="true"
+      ecorePackage="milafeteDataModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="milafeteDataModel.ecore#//AgentType">
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//AgentType/AGENT_REGULIER"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//AgentType/AGENT_PREVILEGE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="milafeteDataModel.ecore#//DocumentType">
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//DocumentType/SCANNED"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//DocumentType/GENERATED"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//DocumentType/INTERNAL_NOTE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="milafeteDataModel.ecore#//DocumentFormat">
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//DocumentFormat/PDF"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//DocumentFormat/JPG"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//DocumentFormat/GIF"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="milafeteDataModel.ecore#//ActionLabel">
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//ActionLabel/INDEFINED"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//ActionLabel/COMPLETION"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//ActionLabel/SUPERVISOR"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//ActionLabel/REJECT"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//ActionLabel/INCOMPLETE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="milafeteDataModel.ecore#//BasketLabel">
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//BasketLabel/INDEFINED"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//BasketLabel/PROCESSED"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//BasketLabel/INCOMPLETE"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//BasketLabel/REJECTED"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//BasketLabel/ToSUPERVISOR"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//BasketLabel/ToPROCESS"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//BasketLabel/CONFIDENTIAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="milafeteDataModel.ecore#//UserStatus">
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//UserStatus/ACTIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//UserStatus/SUSPENDED"/>
+      <genEnumLiterals ecoreEnumLiteral="milafeteDataModel.ecore#//UserStatus/REMOVED"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="milafeteDataModel.ecore#//VectorType"/>
+    <genDataTypes ecoreDataType="milafeteDataModel.ecore#//BPExceptionDataType"/>
+    <genClasses image="false" ecoreClass="milafeteDataModel.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//User/matricule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//User/userName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//User/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//User/lastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//User/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//User/phoneNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//User/pictureFilename"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//User/supervisor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//User/basketList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//User/institution"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//User/actionList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//User/status"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//User/addBasketElement">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//User/addBasketElement/_basket"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//User/basketElementAt">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//User/basketElementAt/ind"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//User/addActionElement">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//User/addActionElement/_action"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//User/actionElementAt">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//User/actionElementAt/ind"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//User/isAdministrator"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//User/isAgent"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//User/authentification">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//User/authentification/pwd"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//Agent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Agent/agentType"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//Administrator"/>
+    <genClasses image="false" ecoreClass="milafeteDataModel.ecore#//Basket">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Basket/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//Basket/dossierList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//Basket/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Basket/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//Basket/actionList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//Basket/ownerUser"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//Basket/addDossierElement">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//Basket/addDossierElement/_dossier"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//Basket/dossierElementAt">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//Basket/dossierElementAt/ind"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//Basket/addActionElement">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//Basket/addActionElement/_actionBasket"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//Basket/actionElementAt">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//Basket/actionElementAt/ind"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//BasketRegular"/>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//Institution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Institution/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Institution/identification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Institution/adresse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Institution/phoneNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Institution/email"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//Dossier">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//Dossier/itemList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Dossier/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Dossier/dateCreation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Dossier/lieuCreationID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Dossier/lieuResidenceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Dossier/label"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//Dossier/addItemElement">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//Dossier/addItemElement/_itemDossier"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//Dossier/itemElementAt">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//Dossier/itemElementAt/_ind"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="milafeteDataModel.ecore#//DossierItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//DossierItem/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//DossierItem/dossier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//DossierItem/label"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//DossierItem/isDocument"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//DossierItem/isDossierSection"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//Document">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Document/dateCreation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Document/lieuCreationID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Document/documentType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Document/documentFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Document/documentPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//Document/documentFilename"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//Document/absoluteFilename"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//DossierSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//DossierSection/itemList"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//UserManagement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//UserManagement/userList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//UserManagement/connectedUser"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//UserManagement/addUserElement">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//UserManagement/addUserElement/_user"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//UserManagement/userElementAt">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//UserManagement/userElementAt/ind"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//UserManagement/searchByUsername">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//UserManagement/searchByUsername/_userName"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//UserManagement/searchByLastname">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//UserManagement/searchByLastname/_lastname"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//UserManagement/initializeUserList">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//UserManagement/initializeUserList/_institution"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//UserManagement/initialization"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//UserManagement/removeUser">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//UserManagement/removeUser/ind"/>
+      </genOperations>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//UserManagement/searchOneUsername">
+        <genParameters ecoreParameter="milafeteDataModel.ecore#//UserManagement/searchOneUsername/_userName"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//Action">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//Action/actionCategoy"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="milafeteDataModel.ecore#//IAction"/>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//ActionBasket">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//ActionBasket/fromBasketAction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//ActionBasket/intoBasketAction"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//ActionManagement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//ActionManagement/allActionCategories"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//ActionManagement/initializeActionCategories"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//BasketManagement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//BasketManagement/allBasketCategories"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//BasketManagement/initializeBasketCategories"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//BasketCategory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//BasketCategory/label"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//ApplicationDataManagement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//ApplicationDataManagement/userManagement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//ApplicationDataManagement/basketManagement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//ApplicationDataManagement/actionManagement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference milafeteDataModel.ecore#//ApplicationDataManagement/institution"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//ApplicationDataManagement/initialization"/>
+      <genOperations ecoreOperation="milafeteDataModel.ecore#//ApplicationDataManagement/createOneAppDataConfig"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//ActionCategory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute milafeteDataModel.ecore#//ActionCategory/actionLabel"/>
+    </genClasses>
+    <genClasses ecoreClass="milafeteDataModel.ecore#//BadParameterException"/>
+  </genPackages>
+</genmodel:GenModel>
